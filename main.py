@@ -2,6 +2,7 @@
 
 import boards
 import solver
+import cProfile
 
 def check_sudoku(grid):
     if (solver.validGrid(grid)):
@@ -18,4 +19,11 @@ print(check_sudoku(boards.invalid_2))
 print(check_sudoku(boards.invalid_3))
 print(check_sudoku(boards.easy))
 print(check_sudoku(boards.hard))
+print(check_sudoku(boards.hard_2))
+
+# This board is very difficult for most solvers.
+#print(check_sudoku(boards.very_hard))
+
+#cProfile.run("check_sudoku(boards.very_hard)")
+
 
